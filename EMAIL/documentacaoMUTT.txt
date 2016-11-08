@@ -1,0 +1,38 @@
+--------------------------------------------------------------------------------------------------------------------------
+Usando o MUTT:
+arquivo de configuração:
+	(nano ~/ .muttrc)
+		# Nome do Remetente
+		set realname="Raimundo Portela"
+
+		# Email do Remetente
+		set from="rai3mb@gmail.com;"
+
+		# Usuario da conta de email
+		set my_user=rai3mb@gmail.com
+
+		# Senha da conta de email
+		set my_pass='SENHA_FACIL'
+
+		# Autenticacao no servidor smtp de email, nesse caso do gmail.com
+		set smtp_url=smtps://$my_user:$my_pass@smtp.gmail.com
+
+		# Camada de segurança, requerida pelo gmail.com
+		set ssl_force_tls = yes 
+
+com o arquivo de configuração salvo temos os seguintes comandos:
+	echo '<TEXTO>' | mutt -s '<ASSUNTO>' <emaildestinatario@provedor.com>
+
+caso queira enviar anexo:
+	echo '<TEXTO>' | mutt -s '<ASSUNTO>' -a 'arquivo.extensao' -- <emaildestinatario@provedor.com>
+
+caso queira enviar para diversos destinatarios:
+	(nano destinatarios)
+	destinatario1@gmail.com
+	destinatario2@hotmail.com
+	destinatario3@yahoo.com.br
+	
+	no terminal:
+	echo '<TEXTO>' | mutt -s '<ASSUNTO>' -a 'arquivo.extesao' 'arquivo2.extesao' -- $(cat destinatarios | tr '\n' ' ')
+
+--------------------------------------------------------------------------------------------------------------------------
