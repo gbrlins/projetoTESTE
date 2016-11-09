@@ -1,0 +1,12 @@
+ENVIANDO EMAIL PHP.
+(09/11/2016 - 20:10 - Gabriel Lins)
+Chama o arquivo "sendmail.php" na url.
+	No arquivo, pode editar os campos de acordo com o serviço que será utilizado.
+	Como iremos utilizar o gmail, já deixei configurado com a porta e o endereço host
+do 'smtp.gmail.com' e sua respectiva porta.
+	Caso dê problema com a porta dar telnet utilizando as possiveis portas (587, 465, 25)
+		telnet smtp.gmail.com 'porta' 
+		(a que der sucesso, pode ser utilizada)
+-------------------------------------------------------------------------------------------------
+Caso tenha outro problema, aqui estão a resolução de alguns:
+https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
