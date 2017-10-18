@@ -1,2 +1,3 @@
 # projetoTESTE
-Meus testes do projeto transversal!
+
+Script manda email python
